@@ -7,6 +7,7 @@ public static class Functions
     public delegate void Instruction(int value);
     public delegate bool Condition(int value1, int value2);
     public delegate int Iterator(int value);
+    
     public static void ForCard(int length, int instructionValue, Instruction instruction)
     { 
         for(int i = 0; i < length; i++)

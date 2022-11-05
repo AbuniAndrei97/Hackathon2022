@@ -21,7 +21,9 @@ public class StickTogether : MonoBehaviour
         
         if(collision.gameObject.tag == "VariableCard")
             this.GetComponent<ForFunction>().SetLength(collision.gameObject.GetComponent<VariableValue>().value);
-        if(collision.gameObject.tag == "InstructionCard")
-            this.GetComponent<ForFunction>().SetInstruction(collision.gameObject.GetComponent<InstructionValue>().instruction);
+        if(collision.gameObject.tag == "InstructionCardDMGDealt")
+            this.GetComponent<ForFunction>().SetInstruction(collision.gameObject.GetComponent<InstructionDMGDealt>().instruction);
+        // if(collision.gameObject.tag == "InstructionCardGoBack")
+        //     this.GetComponent<ForFunction>().SetInstruction(collision.gameObject.GetComponent<InstructionValueGoBack>().instruction);
     }
 }

@@ -7,11 +7,6 @@ public class ForFunction : MonoBehaviour
     private int length;
     private Functions.Instruction instruction;
 
-    void Start()
-    {
-        
-    }
-
     public void GetMethod(int value)
     {
         Functions.TestCall(value);

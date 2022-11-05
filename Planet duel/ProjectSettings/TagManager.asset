@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - VariableCard
-  - InstructionCard
+  - InstructionCardDMGDealt
   layers:
   - Default
   - TransparentFX
