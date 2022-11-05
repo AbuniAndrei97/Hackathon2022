@@ -13,5 +13,6 @@ public static class Instructions
     public static void GoBack(int value)
     {
         //Console.WriteLine($"Go back {value}");
+        Debug.Log($"Wooosh {value}");
     }
 }
