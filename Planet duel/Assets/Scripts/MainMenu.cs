@@ -5,6 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    // //audio
+    // public static MusicControlScript instance;
+
+    // private void Awake()
+
+    // if (instance == null)
+    // {
+    //     instance=this;
+    // }
+    // else
+    // {
+    //     Destroy(gameObject);
+    // }
+
+    //scenes switch
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -15,4 +30,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    
 }
