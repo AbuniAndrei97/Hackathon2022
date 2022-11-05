@@ -18,7 +18,7 @@ public class StickTogether : MonoBehaviour
     {
         Destroy(collision.gameObject.GetComponent<Rigidbody2D>());        
         collision.gameObject.transform.SetParent(this.transform);
-        
+        if(collision.gameObject.tag == "FunctionCard")
         if(collision.gameObject.tag == "VariableCard")
             this.GetComponent<ForFunction>().SetLength(collision.gameObject.GetComponent<VariableValue>().value);
         if(collision.gameObject.tag == "InstructionCardDMGDealt")
