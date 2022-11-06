@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConditionValue : MonoBehaviour
+public class ConditionValueLess : MonoBehaviour
 {
     public int left;
     public Functions.Condition condition;
