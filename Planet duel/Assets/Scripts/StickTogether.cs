@@ -74,12 +74,22 @@ public class StickTogether : MonoBehaviour
             functionIf = true;
         }
 
-        if(collision.gameObject.tag == "ConditionCard" && !isCondition && functionIf)
+        if(collision.gameObject.tag == "ConditionCardLessHP" && !isCondition && functionIf)
         {
             Debug.Log("condition attached");
             function.GetComponent<IfFunction>().SetLeft(collision.gameObject.GetComponent<ConditionValueLessHP>().left);
             function.GetComponent<IfFunction>().SetRight(collision.gameObject.GetComponent<ConditionValueLessHP>().right);
             function.GetComponent<IfFunction>().SetCondition(collision.gameObject.GetComponent<ConditionValueLessHP>().condition);
+            Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
+            collision.gameObject.transform.SetParent(this.transform);
+        }
+
+        if(collision.gameObject.tag == "ConditionCardMoreHP" && !isCondition && functionIf)
+        {
+            Debug.Log("condition attached");
+            function.GetComponent<IfFunction>().SetLeft(collision.gameObject.GetComponent<ConditionValueMoreHP>().left);
+            function.GetComponent<IfFunction>().SetRight(collision.gameObject.GetComponent<ConditionValueMoreHP>().right);
+            function.GetComponent<IfFunction>().SetCondition(collision.gameObject.GetComponent<ConditionValueMoreHP>().condition);
             Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
             collision.gameObject.transform.SetParent(this.transform);
         }
@@ -121,6 +131,18 @@ public class StickTogether : MonoBehaviour
             function.GetComponent<WhileFunction>().SetCondition(collision.gameObject.GetComponent<ConditionValueLessHP>().condition);
             collision.gameObject.GetComponent<ConditionValueLessHP>().iterator = collision.gameObject.GetComponent<ConditionValueLessHP>().left < collision.gameObject.GetComponent<ConditionValueLessHP>().right ? Iterators.Plus : Iterators.Minus;
             function.GetComponent<WhileFunction>().SetIterator(collision.gameObject.GetComponent<ConditionValueLessHP>().iterator);
+            Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
+            collision.gameObject.transform.SetParent(this.transform);
+        }
+
+        if(collision.gameObject.tag == "ConditionCardMoreHP" && !isCondition && functionWhile)
+        {
+            Debug.Log("condition attached");
+            function.GetComponent<WhileFunction>().SetLeft(collision.gameObject.GetComponent<ConditionValueMoreHP>().left);
+            function.GetComponent<WhileFunction>().SetRight(collision.gameObject.GetComponent<ConditionValueMoreHP>().right);
+            function.GetComponent<WhileFunction>().SetCondition(collision.gameObject.GetComponent<ConditionValueMoreHP>().condition);
+            collision.gameObject.GetComponent<ConditionValueMoreHP>().iterator = collision.gameObject.GetComponent<ConditionValueMoreHP>().left < collision.gameObject.GetComponent<ConditionValueMoreHP>().right ? Iterators.Plus : Iterators.Minus;
+            function.GetComponent<WhileFunction>().SetIterator(collision.gameObject.GetComponent<ConditionValueMoreHP>().iterator);
             Destroy(collision.gameObject.GetComponent<Rigidbody2D>());
             collision.gameObject.transform.SetParent(this.transform);
         }
