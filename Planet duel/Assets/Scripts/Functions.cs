@@ -24,7 +24,7 @@ public static class Functions
         }
         else
         {
-            //Console.WriteLine("Nothing");
+            Debug.Log("Nothing");
         }
     }
 
@@ -33,21 +33,17 @@ public static class Functions
         while (condition(value1, value2))
         {
             instruction(intructionValue);
+            
             value1 = iterator(value1);
         }
     }
 
-    public static void WhileCard()
+    public static void WhileCard(int value1, int intructionValue, Instruction instruction, Iterator iterator)
     {
-        // while (condition(value1, value2))
-        // {
-        //     instruction(intructionValue);
-        //     value1 = iterator(value1);
-        // }
-    }
-
-    public static void TestCall(int value)
-    {
-        Debug.Log($"test complete {value}");
+        while (value1 != 0)
+        {
+            instruction(intructionValue);
+            value1 = iterator(value1);
+        }
     }
 }

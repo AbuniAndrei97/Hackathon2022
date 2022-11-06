@@ -4,12 +4,12 @@ using UnityEngine;
 
 public static class Iterators
 {
-    static int Plus(int value)
+    public static int Plus(int value)
     {
         return ++value;
     }
 
-    static int Minus(int value)
+    public static int Minus(int value)
     {
         return --value;
     }

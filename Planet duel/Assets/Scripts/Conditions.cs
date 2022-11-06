@@ -4,13 +4,23 @@ using UnityEngine;
 
 public static class Conditions
 {
-    static bool LessThan(int value1, int value2)
+    public static bool LessThan(int right, int left)
     {
-        return value1 < value2;
+        return right < left;
     }
 
-    static bool MoreThan(int value1, int value2)
+    public static bool MoreThan(int right, int left)
     {
-        return value1 > value2;
+        return right > left;
+    }
+
+    public static bool EqualTo(int right, int left)
+    {
+        return right == left;
+    }
+
+    public static bool DifferentFrom(int right, int left)
+    {
+        return right != left;
     }
 }

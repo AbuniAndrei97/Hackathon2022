@@ -7,6 +7,16 @@ TagManager:
   - VariableCard
   - InstructionCardDMGDealt
   - FunctionCard
+  - FunctionCardFor
+  - FunctionCardIf
+  - FunctionCardWhile
+  - ConditionCardLessHP
+  - ConditionCardMoreHP
+  - InstructionCardHeal
+  - InstructionCardgoBack
+  - ConditionCardLess
+  - ConditionCardMore
+  - ConditionCardEqual
   layers:
   - Default
   - TransparentFX

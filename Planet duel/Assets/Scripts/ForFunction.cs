@@ -5,18 +5,20 @@ using UnityEngine;
 public class ForFunction : MonoBehaviour
 {
     private int length;
+    private int instructionValue;
     private Functions.Instruction instruction;
+    private bool StopUpdate = false;
 
-    public void GetMethod(int value)
+    public void SetLength(int length)
     {
-        Functions.TestCall(value);
+        this.length = length;
     }
 
-    public void SetLength(int value)
+    public void SetInstructionValue(int instructionValue = 0)
     {
-        this.length = value;
+        this.instructionValue = instructionValue;
     }
-
+    
     public void SetInstruction(Functions.Instruction instruction)
     {
         this.instruction = instruction;
@@ -24,9 +26,10 @@ public class ForFunction : MonoBehaviour
 
     void Update()
     {
-        if(length > 0 && instruction != null)
+        if(length > 0 && instruction != null && !StopUpdate)
         {
-            Functions.ForCard(length, 10, instruction);
+            Functions.ForCard(length, instructionValue, instruction);
+            StopUpdate = true;
         }
     }
 }
