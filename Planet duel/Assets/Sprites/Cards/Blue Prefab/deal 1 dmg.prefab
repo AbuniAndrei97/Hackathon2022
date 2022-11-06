@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6001440430867916196}
   - component: {fileID: 760098378825183817}
+  - component: {fileID: 6555218631110217799}
   m_Layer: 0
   m_Name: deal 1 dmg
-  m_TagString: Untagged
+  m_TagString: InstructionCardDMGDealt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6555218631110217799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552411107502949719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdd4137496edf54ea1ff38b8b1b23df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

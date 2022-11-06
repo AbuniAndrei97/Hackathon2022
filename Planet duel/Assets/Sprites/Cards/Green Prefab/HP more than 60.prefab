@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2614469867255412360}
   m_Layer: 0
   m_Name: HP more than 60
-  m_TagString: ConditionCardMoreHP
+  m_TagString: ConditionCardMore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace5159e9f1ae7c4fa97d8fd28cef2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 50
+  left: -1
   right: 60

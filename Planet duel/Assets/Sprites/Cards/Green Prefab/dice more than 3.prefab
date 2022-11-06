@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8436257140494282416}
   - component: {fileID: 517227705315060481}
+  - component: {fileID: 1786874430326517253}
   m_Layer: 0
   m_Name: dice more than 3
-  m_TagString: Untagged
+  m_TagString: ConditionCardMore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1786874430326517253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415493904957150881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f9498ca01f93c4ba5b0e4cdb3c0371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: -1
+  right: 3
